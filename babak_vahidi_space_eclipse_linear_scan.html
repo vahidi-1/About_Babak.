@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>بابک وحیدی | توسعه‌دهنده VMP و Nether RP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Orbitron:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#06060b;--panel:rgba(19,18,29,.88);--purple:#b56aff;--cyan:#67e8f9;--text:#fff;--muted:#eeeaf5;--line:rgba(181,106,255,.3)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 15% 12%,rgba(124,58,237,.30),transparent 34%),radial-gradient(ellipse at 88% 72%,rgba(34,211,238,.16),transparent 32%),radial-gradient(ellipse at 50% 100%,rgba(168,85,247,.12),transparent 42%),linear-gradient(135deg,#05050b 0%,#0b0817 48%,#050a12 100%);color:var(--text);font-family:Vazirmatn,sans-serif;line-height:1.9;min-height:100vh;position:relative}
+body:before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.28;background-image:radial-gradient(#fff 1px,transparent 1px),radial-gradient(#b56aff 1px,transparent 1px);background-size:100px 100px,155px 155px;animation:stars 25s linear infinite}
+body:after{content:"";position:fixed;left:0;right:0;top:-35%;height:35%;z-index:10;pointer-events:none;opacity:.8;background:linear-gradient(to bottom,transparent 0%,rgba(103,232,249,.015) 25%,rgba(103,232,249,.10) 75%,rgba(103,232,249,.55) 98%,rgba(181,106,255,.8) 100%);border-bottom:1px solid rgba(103,232,249,.8);box-shadow:0 8px 35px rgba(34,211,238,.22),0 0 70px rgba(168,85,247,.18);animation:scanSweep 7s linear infinite}
+.wrap{position:relative;z-index:1}
+@keyframes stars{to{background-position:100px 100px,180px 200px}}
+@keyframes scanSweep{0%{top:-35%}100%{top:110%}}
+button,a{font:inherit}
+a{color:inherit}
+.wrap{width:min(1080px,92%);margin:auto}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0}
+.brand{direction:ltr;font:800 14px Orbitron,sans-serif;letter-spacing:2px;color:#e9d5ff}
+.brand span{color:var(--cyan)}
+.lang,.btn,.back{border:1px solid var(--line);background:rgba(181,106,255,.12);color:white;border-radius:13px;padding:10px 16px;text-decoration:none;cursor:pointer;transition:.25s;font-weight:700}
+.lang:hover,.btn:hover,.back:hover{transform:translateY(-3px);box-shadow:0 0 28px rgba(181,106,255,.25)}
+.hero{min-height:75vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:55px 0 75px}
+.badge{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);background:rgba(181,106,255,.09);color:#e9d5ff;border-radius:999px;padding:7px 15px;font-size:12px;font-weight:700}
+.dot{width:8px;height:8px;background:var(--cyan);border-radius:50%;box-shadow:0 0 15px var(--cyan)}
+h1{font-size:clamp(43px,9vw,88px);line-height:1.3;margin:18px 0 0;font-weight:900;letter-spacing:-2px}
+h1 span{display:block;color:transparent;-webkit-text-stroke:1px var(--purple);text-shadow:0 0 35px #a855f733}
+.role{font-weight:800;color:#f0e6ff;margin-top:18px}
+.subtitle{max-width:700px;color:var(--muted);margin:16px auto 0;font-size:15px}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:25px}
+.btn.primary{background:linear-gradient(120deg,#6d28d9,#a855f7);border-color:transparent}
+section{padding:36px 0}
+.section-title{font-size:27px;font-weight:900;margin:0 0 7px}
+.section-desc{color:var(--muted);margin:0 0 23px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.card{padding:23px;border:1px solid var(--line);border-radius:19px;background:var(--panel);box-shadow:0 10px 38px #0004;transition:.3s}
+.card:hover{transform:translateY(-5px);border-color:#b56affaa;box-shadow:0 0 34px #a855f72a}
+.icon{display:grid;place-items:center;width:43px;height:43px;border-radius:12px;background:#a855f728;color:#e9d5ff;margin-bottom:14px;font-size:20px}
+.card h3{margin:0 0 8px;font-size:18px;color:#fff;font-weight:800}.card p{margin:0;color:#f0edf7;font-size:14px;font-weight:500}
+.platform{display:grid;grid-template-columns:1.3fr .7fr;gap:20px;padding:25px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(130deg,#6d28d92b,#11111bdb)}
+.platform h2{margin:0 0 10px;font-size:26px;color:#fff;font-weight:800}.platform p{color:#f0edf7;margin:0;font-weight:500}
+.serverbox{display:grid;place-items:center;text-align:center;min-height:150px;border-radius:17px;background:#080810;border:1px solid #ffffff1b}
+.serverbox strong{font:800 25px Orbitron;color:#d8b4fe;direction:ltr}.serverbox span{color:var(--muted);font-size:13px}
+.seasons{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}
+.season-label{font-size:12px;color:var(--cyan);font-weight:800}
+.season-name{font:800 25px Orbitron,sans-serif;direction:ltr;color:#e9d5ff;margin:5px 0}
+.quote{text-align:center;border:1px solid var(--line);border-radius:22px;padding:30px;background:#a855f711;color:#f3e8ff;font-size:20px;font-weight:700}
+footer{text-align:center;color:#e5deef;padding:35px 0 45px;font-size:13px}
+.page{display:none;min-height:80vh;padding:25px 0 60px}.page.active{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.guide-hero{padding:27px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(130deg,#6d28d936,#11111be8);margin:18px 0}
+.guide-hero h1{font-size:clamp(28px,5vw,44px);margin:10px 0}
+.step{padding:21px;margin:15px 0;border:1px solid var(--line);border-radius:18px;background:var(--panel)}
+.step h2{font-size:19px;margin:0 0 7px;color:#fff;font-weight:800}.step p,.step li{color:#f0edf7;margin:5px 0;font-weight:500}
+.num{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#a855f733;color:#f0d9ff;margin-left:8px}
+code{direction:ltr;display:inline-block;background:#080810;border:1px solid #ffffff2a;border-radius:8px;padding:1px 9px;color:var(--cyan);font:700 14px monospace}
+.path{direction:ltr;text-align:center;padding:15px;border:1px solid var(--line);border-radius:13px;background:#090811;color:#e9d5ff;font-weight:800;margin:15px 0}
+.note{border-right:4px solid var(--cyan)}
+.ripple{position:fixed;pointer-events:none;z-index:20;border:2px solid #c084fc;border-radius:50%;width:14px;height:14px;transform:translate(-50%,-50%);animation:rip .6s ease-out forwards}
+@keyframes rip{to{transform:translate(-50%,-50%) scale(7);opacity:0}}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.platform{grid-template-columns:1fr}.seasons{grid-template-columns:1fr}.hero{min-height:65vh}nav{padding:16px 0}h1{letter-spacing:-1px}.section-title{font-size:23px}}
+
+.space-atmosphere{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;background:radial-gradient(ellipse at 50% 70%,rgba(91,33,182,.12),transparent 42%),radial-gradient(ellipse at 15% 85%,rgba(34,211,238,.09),transparent 36%); }
+.space-atmosphere:before{content:"";position:absolute;width:clamp(150px,24vw,300px);aspect-ratio:1;top:7%;right:12%;border-radius:50%;background:radial-gradient(circle at 38% 35%,#111326 0 48%,#070912 60%,transparent 70%);box-shadow:0 0 0 3px rgba(167,139,250,.22),0 0 25px 8px rgba(139,92,246,.35),0 0 65px 20px rgba(76,29,149,.28);opacity:.7}
+.space-atmosphere:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 78%,rgba(196,181,253,.08),transparent 35%),linear-gradient(180deg,transparent 50%,rgba(103,232,249,.025) 70%,rgba(181,106,255,.06) 100%);filter:blur(18px);opacity:.9}
+.wrap{position:relative;z-index:2}
+@media(max-width:760px){.space-atmosphere:before{width:155px;top:8%;right:4%;opacity:.5}}
+
+</style>
+</head>
+<body>
+<div class="space-atmosphere" aria-hidden="true"></div>
+<div class="wrap">
+<nav>
+  <div class="brand">BABAK <span>VAHIDI</span></div>
+  <button class="lang" id="languageToggle" type="button">🌐 English</button>
+</nav>
+
+<main id="homePage" class="page active">
+  <header class="hero">
+    <div class="badge"><span class="dot"></span> توسعه‌دهنده و سازنده پروژه‌های بازی</div>
+    <h1>بابک وحیدی<span>BABAK VAHIDI</span></h1>
+    <div class="role">بنیان‌گذار Nether RP • توسعه‌دهنده VMP</div>
+    <p class="subtitle">دانش‌آموز سمپاد، علاقه‌مند به برنامه‌نویسی، توسعه بازی و ساخت تجربه‌های چندنفره. ساکن کرج، ایران.</p>
+    <div class="actions">
+      <a class="btn primary" href="#projects" data-scroll="projects">مشاهده پروژه‌ها</a>
+      <a class="btn" href="https://vmp.ir/" target="_blank" rel="noopener">وب‌سایت رسمی VMP ↗</a>
+    </div>
+    <button class="btn primary" style="margin-top:14px" type="button" data-page="guide">📘 نحوه اتصال به سرور VMP</button>
+  </header>
+
+  <section id="about">
+    <h2 class="section-title">درباره من</h2>
+    <p class="section-desc">علاقه‌مندی‌ها و مسیر فعالیت من</p>
+    <div class="grid">
+      <article class="card"><div class="icon">⌘</div><h3>برنامه‌نویسی و توسعه</h3><p>علاقه‌مند به ساخت پروژه‌های دیجیتال، طراحی رابط کاربری و توسعه تجربه‌های تعاملی.</p></article>
+      <article class="card"><div class="icon">🎮</div><h3>بازی‌های چندنفره</h3><p>علاقه‌مند به دنیای سرورهای نقش‌آفرینی و ساخت محیط‌های بازی برای بازیکنان.</p></article>
+      <article class="card"><div class="icon">✦</div><h3>سمپاد</h3><p>دانش‌آموز سمپاد با علاقه به یادگیری فناوری و پیشرفت در برنامه‌نویسی.</p></article>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">پروژه‌ها و پلتفرم</h2>
+    <p class="section-desc">VMP پلتفرم سرور است و Nether RP روی این پلتفرم اجرا می‌شود.</p>
+    <div class="platform">
+      <div>
+        <h2>پلتفرم <span style="color:var(--purple)">VMP</span></h2>
+        <p>VMP یک پلتفرم چندنفره است. برای نصب لانچر، مشاهده اطلاعات به‌روز و دریافت فایل‌ها از وب‌سایت رسمی آن استفاده کنید.</p>
+        <div class="actions" style="justify-content:flex-start"><a class="btn primary" href="https://vmp.ir/" target="_blank" rel="noopener">ورود به سایت VMP ↗</a><button class="btn" type="button" data-page="guide">راهنمای اتصال</button></div>
+      </div>
+      <div class="serverbox"><div><strong>NETHER RP</strong><br><span>فصل دوم • پلتفرم VMP</span></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">فصل‌های سرور</h2>
+    <p class="section-desc">سرور در دو فصل ارائه شده است.</p>
+    <div class="seasons">
+      <article class="card"><div class="season-label">فصل اول</div><div class="season-name">ARCANUM</div><p>فصل اول از مسیر سرور.</p></article>
+      <article class="card"><div class="season-label">فصل دوم</div><div class="season-name">NETHER</div><p>فصل دوم سرور که روی پلتفرم VMP اجرا می‌شود.</p></article>
+    </div>
+  </section>
+  <section><div class="quote">«ایده‌ها وقتی ارزشمند می‌شوند که آن‌ها را بسازیم.»</div></section>
+  <footer>بابک وحیدی • ساکن کرج، ایران • VMP / NETHER RP</footer>
+</main>
+
+<main id="guidePage" class="page">
+  <button class="back" type="button" data-page="home">← بازگشت به صفحه اصلی</button>
+  <div class="guide-hero">
+    <div class="badge"><span class="dot"></span> راهنمای اتصال به سرور</div>
+    <h1>چطور وارد سرور <span style="color:var(--purple)">Nether RP</span> شویم؟</h1>
+    <p style="color:var(--muted)">برای ورود به Nether RP، مراحل زیر را به‌ترتیب انجام بده. نام سرور را در فهرست سرورها جست‌وجو کن و پس از انتخاب، روی دکمه اتصال بزن.</p>
+  </div>
+  <section class="step"><h2><span class="num">۱</span>دریافت و نصب VMP</h2><p>به وب‌سایت رسمی VMP برو و لانچر را از منبع رسمی دریافت کن. فایل دریافت‌شده را اجرا کن و مراحل نصب را انجام بده.</p><p><a class="btn" href="https://vmp.ir/" target="_blank" rel="noopener">باز کردن سایت رسمی VMP ↗</a></p><p>برای اطلاع از پیش‌نیازها و مراحل به‌روز، راهنمای موجود در سایت رسمی را بررسی کن؛ ممکن است نسخه‌ها و نیازمندی‌ها تغییر کنند.</p></section>
+  <section class="step"><h2><span class="num">۲</span>اجرای لانچر</h2><p>برنامه VMP Launcher را باز کن. اگر به‌روزرسانی درخواست شد، اجازه بده کامل شود. مطمئن شو بازی و فایل‌های موردنیاز مطابق راهنمای فعلی VMP نصب شده‌اند.</p></section>
+  <section class="step"><h2><span class="num">۳</span>باز کردن فهرست سرورها</h2><p>داخل برنامه به بخش <code>Server List</code> برو تا فهرست سرورهای قابل مشاهده را ببینی.</p></section>
+  <section class="step"><h2><span class="num">۴</span>جست‌وجوی سرور Nether RP</h2><p>در کادر جست‌وجوی فهرست سرورها، نام زیر را دقیق وارد کن:</p><div class="path">Nether RP</div><p>سرور <strong>Nether RP</strong> را در نتایج پیدا کن و روی آن کلیک کن تا انتخاب شود.</p></section>
+  <section class="step"><h2><span class="num">۵</span>اتصال به سرور</h2><p>بعد از انتخاب سرور، روی دکمه <code>Connect</code> کلیک کن. منتظر بمان تا اتصال و بارگذاری انجام شود و پیام‌های نمایش‌داده‌شده در لانچر را دنبال کن.</p></section>
+  <section class="step note"><h2>اگر سرور را پیدا نکردی</h2><ul><li>املای نام را بررسی کن: <code>Nether RP</code>.</li><li>اتصال اینترنت و به‌روز بودن لانچر را بررسی کن.</li><li>اگر سرور در فهرست نمایش داده نمی‌شود، ممکن است موقتاً آفلاین یا خارج از دسترس باشد؛ اطلاعیه‌های رسمی سرور را بررسی کن.</li><li>برای دانلود، فقط از وب‌سایت رسمی VMP استفاده کن.</li></ul></section>
+  <div class="path">VMP → Server List → Search “Nether RP” → Select → Connect</div>
+  <footer>فصل اول: Arcanum • فصل دوم: Nether</footer>
+</main>
+</div>
+<script>
+const home=document.getElementById('homePage'), guide=document.getElementById('guidePage');
+function showPage(which){const isGuide=which==='guide';home.classList.toggle('active',!isGuide);guide.classList.toggle('active',isGuide);window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'',isGuide?'#guide':'#home')}
+document.querySelectorAll('[data-page]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+document.querySelectorAll('[data-scroll]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();document.getElementById(a.dataset.scroll).scrollIntoView({behavior:'smooth'})}));
+const languageButton=document.getElementById('languageToggle');
+const translations={
+'توسعه‌دهنده و سازنده پروژه‌های بازی':'Developer & Creator of Gaming Projects',
+'بنیان‌گذار Nether RP • توسعه‌دهنده VMP':'Founder of Nether RP • VMP Developer',
+'دانش‌آموز سمپاد، علاقه‌مند به برنامه‌نویسی، توسعه بازی و ساخت تجربه‌های چندنفره. ساکن کرج، ایران.':'NODET student interested in programming, game development, and creating multiplayer experiences. Based in Karaj, Iran.',
+'مشاهده پروژه‌ها':'Explore Projects','وب‌سایت رسمی VMP ↗':'Official VMP Website ↗',
+'درباره من':'About Me','علاقه‌مندی‌ها و مسیر فعالیت من':'My interests and what I do',
+'برنامه‌نویسی و توسعه':'Programming & Development','علاقه‌مند به ساخت پروژه‌های دیجیتال، طراحی رابط کاربری و توسعه تجربه‌های تعاملی.':'Interested in building digital projects, designing user interfaces, and developing interactive experiences.',
+'بازی‌های چندنفره':'Multiplayer Gaming','علاقه‌مند به دنیای سرورهای نقش‌آفرینی و ساخت محیط‌های بازی برای بازیکنان.':'Interested in roleplay servers and creating game worlds for players.',
+'سمپاد':'NODET','دانش‌آموز سمپاد با علاقه به یادگیری فناوری و پیشرفت در برنامه‌نویسی.':'A NODET student passionate about technology and improving programming skills.',
+'پروژه‌ها و پلتفرم':'Projects & Platform','VMP پلتفرم سرور است و Nether RP روی این پلتفرم اجرا می‌شود.':'VMP is the multiplayer platform, and Nether RP runs on it.',
+'پلتفرم ':'Platform ','VMP یک پلتفرم چندنفره است. برای نصب لانچر، مشاهده اطلاعات به‌روز و دریافت فایل‌ها از وب‌سایت رسمی آن استفاده کنید.':'VMP is a multiplayer platform. Visit its official website for the launcher, current information, and downloads.',
+'ورود به سایت VMP ↗':'Visit VMP Website ↗','راهنمای اتصال':'Connection Guide',
+'فصل دوم • پلتفرم VMP':'Season 2 • VMP Platform','فصل‌های سرور':'Server Seasons',
+'سرور در دو فصل ارائه شده است.':'The server has had two seasons.',
+'فصل اول':'SEASON ONE','فصل دوم':'SEASON TWO','فصل اول از مسیر سرور.':'The first season of the server.',
+'فصل دوم سرور که روی پلتفرم VMP اجرا می‌شود.':'The second season, running on the VMP platform.',
+'«ایده‌ها وقتی ارزشمند می‌شوند که آن‌ها را بسازیم.»':'“Ideas become valuable when we build them.”',
+'بابک وحیدی • ساکن کرج، ایران • VMP / NETHER RP':'Babak Vahidi • Based in Karaj, Iran • VMP / NETHER RP',
+'← بازگشت به صفحه اصلی':'← Back to Home','راهنمای اتصال به سرور':'SERVER CONNECTION GUIDE',
+'چطور وارد سرور ':'How to join ',' شویم؟':'?',
+'برای ورود به Nether RP، مراحل زیر را به‌ترتیب انجام بده. نام سرور را در فهرست سرورها جست‌وجو کن و پس از انتخاب، روی دکمه اتصال بزن.':'Follow these steps to join Nether RP. Search for the server in the server list, select it, then click Connect.',
+'دریافت و نصب VMP':'Download and Install VMP','به وب‌سایت رسمی VMP برو و لانچر را از منبع رسمی دریافت کن. فایل دریافت‌شده را اجرا کن و مراحل نصب را انجام بده.':'Visit the official VMP website and download the launcher from the official source. Run the downloaded file and complete the installation.',
+'باز کردن سایت رسمی VMP ↗':'Open Official VMP Website ↗',
+'برای اطلاع از پیش‌نیازها و مراحل به‌روز، راهنمای موجود در سایت رسمی را بررسی کن؛ ممکن است نسخه‌ها و نیازمندی‌ها تغییر کنند.':'Check the official website for current requirements and instructions; versions and requirements may change.',
+'اجرای لانچر':'Launch the Launcher','برنامه VMP Launcher را باز کن. اگر به‌روزرسانی درخواست شد، اجازه بده کامل شود. مطمئن شو بازی و فایل‌های موردنیاز مطابق راهنمای فعلی VMP نصب شده‌اند.':'Open VMP Launcher. If an update is requested, let it finish. Make sure the game and required files are installed according to the current VMP instructions.',
+'باز کردن فهرست سرورها':'Open the Server List','داخل برنامه به بخش ':'In the app, open the ',' برو تا فهرست سرورهای قابل مشاهده را ببینی.':' section to see the available servers.',
+'جست‌وجوی سرور Nether RP':'Search for Nether RP','در کادر جست‌وجوی فهرست سرورها، نام زیر را دقیق وارد کن:':'In the server list search box, enter this exact name:',
+'سرور ':'Server ',' را در نتایج پیدا کن و روی آن کلیک کن تا انتخاب شود.':' in the results and click it to select it.',
+'اتصال به سرور':'Connect to the Server','بعد از انتخاب سرور، روی دکمه ':'After selecting the server, click ',' کلیک کن. منتظر بمان تا اتصال و بارگذاری انجام شود و پیام‌های نمایش‌داده‌شده در لانچر را دنبال کن.':'. Wait for the connection and loading to finish, and follow any messages shown in the launcher.',
+'اگر سرور را پیدا نکردی':'If You Can’t Find the Server','املای نام را بررسی کن: ':'Check the spelling: ',
+'اتصال اینترنت و به‌روز بودن لانچر را بررسی کن.':'Check your internet connection and make sure the launcher is up to date.',
+'اگر سرور در فهرست نمایش داده نمی‌شود، ممکن است موقتاً آفلاین یا خارج از دسترس باشد؛ اطلاعیه‌های رسمی سرور را بررسی کن.':'If the server does not appear in the list, it may be offline or temporarily unavailable. Check the server’s official announcements.',
+'برای دانلود، فقط از وب‌سایت رسمی VMP استفاده کن.':'Only use the official VMP website for downloads.',
+'فصل اول: Arcanum • فصل دوم: Nether':'Season 1: Arcanum • Season 2: Nether',
+'🌐 English':'🌐 فارسی'
+};
+const originalTextNodes=[];
+const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+while(walker.nextNode()){
+ const node=walker.currentNode;
+ const key=node.nodeValue.trim();
+ if(key && translations[key]) originalTextNodes.push({node,original:node.nodeValue,key});
+}
+function setLanguage(lang){
+ const isEnglish=lang==='en';
+ document.documentElement.lang=isEnglish?'en':'fa';
+ document.documentElement.dir=isEnglish?'ltr':'rtl';
+ document.body.style.fontFamily=isEnglish?'Inter, Arial, sans-serif':'Vazirmatn, sans-serif';
+ languageButton.textContent=isEnglish?'🌐 فارسی':'🌐 English';
+ for(const item of originalTextNodes){
+   const replacement=isEnglish?translations[item.key]:item.key;
+   const leading=item.node.nodeValue.match(/^\s*/)[0];
+   const trailing=item.node.nodeValue.match(/\s*$/)[0];
+   item.node.nodeValue=leading+replacement+trailing;
+ }
+ try{localStorage.setItem('babak-profile-language',lang)}catch(e){}
+}
+languageButton.addEventListener('click',()=>setLanguage(document.documentElement.lang==='fa'?'en':'fa'));
+let initial='fa';try{initial=localStorage.getItem('babak-profile-language')||'fa'}catch(e){}
+if(initial==='en')setLanguage('en');
+document.addEventListener('click',e=>{const r=document.createElement('span');r.className='ripple';r.style.left=e.clientX+'px';r.style.top=e.clientY+'px';document.body.appendChild(r);setTimeout(()=>r.remove(),650)});
+if(location.hash==='#guide')showPage('guide');
+</script>
+</body>
+</html>
